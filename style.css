@@ -1,0 +1,76 @@
+body{
+    background-color: rgba(0, 0, 0, 0.39);
+    background-size: cover;
+    height: 100%;
+}
+
+header{
+    font-size: 65px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    text-align: center;
+}
+
+.description{
+    font-size: 26px;
+}
+
+.services{
+    text-decoration: underline;
+    color: black;
+    font-size: 40px;
+    font-weight: 400;
+}
+.services:hover{
+    color: rgb(94, 94, 94);
+    font-size: 41px;
+}
+
+
+main{
+    margin-top: 3%;
+    height: 300px;
+    
+}
+.results{
+    height: 50%;
+    text-align: center;
+}
+.resultsList{
+    list-style-type: none;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.inputs{
+    margin-top: 3%;
+    height: 50%;
+}
+
+.userInput{
+position: absolute;
+left: 42.5%;
+height: 40px;
+width: 300px;
+border: none;
+background-color: rgba(0, 0, 0, 0.233);
+font-size: 20px;
+border-radius: 10px;
+outline: none;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-weight: 400;
+padding: 3px;
+}
+
+.submit{
+    position: relative;
+    left: 53.5%;
+    top: 50px;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: gray;
+}
+
