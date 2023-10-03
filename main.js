@@ -20,7 +20,7 @@ async function checkPhoneNumber(){
     endpoint.searchParams.set('format', 1);
 
     const response = await fetch(endpoint);
-    
+    console.log(response)
     //Format Data
     const data = await response.json();
     console.log(data)
