@@ -9,7 +9,7 @@ async function checkPhoneNumber(){
 
 
     if (!number){
-        alert('Please enter a hero before submission');
+        alert('Please enter a number before submission');
         return;
     }
 
@@ -20,21 +20,12 @@ async function checkPhoneNumber(){
     endpoint.searchParams.set('format', 1);
 
     const response = await fetch(endpoint);
-    console.log(response)
+    
     //Format Data
     const data = await response.json();
-    console.log(data)
+    console.log(data.error)
     //DOM Manipulation
-    if (data.valid != true){
-        let li = document.createElement('li');
-        let li1 = document.createElement('li');
-
-        li.innerHTML = 'Please enter a valid number!';
-        li1.innerHTML = `${number} is not a valid phone number!`;
-
-        resultList.appendChild(li1);
-        resultList.appendChild(li);
-    }else{
+    if (data.valid){
         let li = document.createElement('li');
         let li1 = document.createElement('li');
 
@@ -43,6 +34,19 @@ async function checkPhoneNumber(){
 
         resultList.appendChild(li);
         resultList.appendChild(li1);
+    }else if (data.error.code == 106){
+        let li = document.createElement('li');
+        li.innerHTML = 'Rate exceeded please slow down.'
+        resultList.appendChild(li)
+    } else{
+        let li = document.createElement('li');
+        let li1 = document.createElement('li');
+
+        li.innerHTML = 'Please enter a valid number!';
+        li1.innerHTML = `${number} is not a valid phone number!`;
+
+        resultList.appendChild(li1);
+        resultList.appendChild(li);
     }
 
     
